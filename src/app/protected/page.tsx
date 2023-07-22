@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type User = {
   id: number;
   name: string;
@@ -23,7 +25,7 @@ export default async function Profile() {
             key={user.id}
             style={{ border: "1px solid #ccc", textAlign: "center" }}
           >
-            <img
+            <Image
               src={`https://robohash.org/${user.id}?set=set2&size=180x180`}
               alt={user.name}
               style={{ height: 180, width: 180 }}

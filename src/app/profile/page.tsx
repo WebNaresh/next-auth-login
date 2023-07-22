@@ -1,6 +1,7 @@
 "use client";
 
 import { useSession } from "next-auth/react";
+import Image from "next/image";
 import { redirect } from "next/navigation";
 import { cache, use } from "react";
 
@@ -42,7 +43,7 @@ export default function Profile() {
             key={user.id}
             style={{ border: "1px solid #ccc", textAlign: "center" }}
           >
-            <img
+            <Image
               src={`https://robohash.org/${user.id}?set=set2&size=180x180`}
               alt={user.name}
               style={{ height: 180, width: 180 }}
