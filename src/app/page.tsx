@@ -1,6 +1,10 @@
+"use client";
 import Header from "@/components/header.component";
+import { useSession } from "next-auth/react";
 
-export default async function Home() {
+export default function Home() {
+  let data = useSession();
+  console.log(`🚀 ~ data:`, data);
   return (
     <>
       <Header />
